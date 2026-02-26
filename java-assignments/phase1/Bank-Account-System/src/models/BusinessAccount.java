@@ -23,9 +23,5 @@ public void chargefee(){
 this.withdraw(BigDecimal.valueOf(25));
 
 }
-@Override
-public void withdraw(BigDecimal amount){
-    super.withdraw(amount);
-}
 
 }

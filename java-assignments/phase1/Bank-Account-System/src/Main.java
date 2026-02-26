@@ -56,9 +56,7 @@ void main() {
         business.chargefee();
         System.out.println("Transaction History of "+savings.getOwnerName());
 
-        for(String t : savings.getTransactionHistory()){
-                System.out.println(t);
-        }
+       savings.printStatement();
         System.out.println();
         BankAccount found = bank.findByOwner("Salma");
         System.out.println("Found account balance: "

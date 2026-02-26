@@ -75,4 +75,9 @@ public abstract class BankAccount {
     public String getOwnerName() {
         return ownerName;
     }
+    public void  printStatement(){
+        for(String s:transactionHistory){
+            System.out.println(s);
+        }
+    }
 }
