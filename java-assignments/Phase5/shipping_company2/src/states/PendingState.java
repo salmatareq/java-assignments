@@ -5,14 +5,11 @@ import interfaces.State;
 import model.Product;
 
 public class PendingState implements State {
-   private Product product;
-    public PendingState(Product product){
-        this.product=product;
-    }
-    @Override
-    public void   nextState() {
 
-        product.setState(StateFactory.getState("SHIPPED",product));
+    @Override
+    public void   nextState(Product  product) {
+
+        product.setState(StateFactory.getState("SHIPPED"));
 
     }
 

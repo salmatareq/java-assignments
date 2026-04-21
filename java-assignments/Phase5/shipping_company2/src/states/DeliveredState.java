@@ -6,12 +6,8 @@ import model.Product;
 
 public class DeliveredState  implements State {
 
-    private Product product;
-    public DeliveredState(Product product){
-        this.product=product;
-    }
     @Override
-    public void nextState() {
+    public void nextState(Product p) {
         System.out.println("Already delivered. No next state.");
     }
 

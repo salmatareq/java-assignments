@@ -5,14 +5,10 @@ import interfaces.State;
 import model.Product;
 
 public class OutForDeliveryState  implements State {
-    private Product product;
-    public OutForDeliveryState(Product product){
-        this.product=product;
-    }
 
     @Override
-    public void nextState() {
-        product.setState(StateFactory.getState("DELIVERED",product));
+    public void nextState(Product  product) {
+        product.setState(StateFactory.getState("DELIVERED"));
     }
 
     @Override

@@ -6,10 +6,10 @@ import states.DeliveredState;
 import states.OutForDeliveryState;
 
 public class StateFactory {
-    public static State getState(String type, Product product) {
+    public static State getState(String type ) {
         switch(type) {
-            case "SHIPPED": return new OutForDeliveryState(product);
-            case "DELIVERED": return new DeliveredState(product);
+            case "SHIPPED": return new OutForDeliveryState();
+            case "DELIVERED": return new DeliveredState();
             default: throw new IllegalArgumentException();
         }
     }

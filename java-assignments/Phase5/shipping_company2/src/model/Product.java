@@ -12,16 +12,11 @@ public class Product {
     private IShipping shipping;
     private Ipackaging packagingType;
     private State currentState;
-    State pendingState;
-    State shippedState;
-    State deliveredState;
+
 
     public Product(double weight) {
         this.weight = weight;
-        pendingState = new PendingState(this);
-        shippedState = new OutForDeliveryState(this);
-        deliveredState = new DeliveredState(this);
-        currentState = pendingState;
+        currentState = new PendingState();
     }
 
     public void ShippingProduct() {
@@ -53,7 +48,7 @@ public class Product {
     }
 
     public void nextState() {
-        currentState.nextState();
+        currentState.nextState(this);
         currentState.handle();
     }
 
