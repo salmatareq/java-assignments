@@ -19,8 +19,8 @@ p2.Packaging();
     int t=3;
     while(t>0){
         System.out.print("next state is : ");
-         p1.nextState();
-        System.out.println("curret state is : "+p1.getCurrentState());
+         service.moveToNextState(p1);
+    System.out.println("curret state is : "+service.getCurrentState(p1));
 
     t--;}
 }
